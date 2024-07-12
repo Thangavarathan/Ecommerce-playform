@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, 
+						initial-scale=1.0">
+	<title>NIKE STORE</title>
+	<link rel="stylesheet" href="loginstyle.css">
+</head>
+
+<body>
+	<video id="video-background" autoplay muted loop>
+		<source src="intro12.mp4" type="video/mp4">
+	  </video>
+	<div class="wrapper">
+		<div class="title-text">
+		  <div class="title login">Login </div>
+		  <div class="title signup">Signup </div>
+		</div>
+		<div class="form-container">
+		  <div class="slide-controls">
+			<input type="radio" name="slide" id="login" checked>
+			<input type="radio" name="slide" id="signup">
+			<label for="login" class="slide login">Login</label>
+			<label for="signup" class="slide signup">Signup</label>
+			<div class="slider-tab"></div>
+		  </div>
+		  <div class="form-inner">
+			<form action="login.php" class="login" onsubmit="login(event)">
+			  <div class="field">
+				<input type="text" placeholder="Email Address" required>
+			  </div>
+			  <div class="field">
+				<input type="password" placeholder="Password" required>
+			  </div>
+			  <div class="pass-link"><a href="#">Forgot password?</a></div>
+			  <div class="field btn">
+				<div class="btn-layer"></div>
+				<input type="submit" value="Login">
+			  </div>
+			  <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+			</form>
+			<form action="#" class="signup" onsubmit="signup(event)">
+			
+			  <div class="field">
+				<input type="text" placeholder="Email Address" required>
+			  </div>
+			  <div class="field">
+				<input type="password" placeholder="Password" required>
+			  </div>
+			  <div class="field">
+				<input type="password" placeholder="Confirm password" required>
+			  </div>
+			  <div class="field btn">
+				<div class="btn-layer"></div>
+				<input type="submit" value="Signup">
+			  </div>
+			</form>
+		  </div>
+		</div>
+	  </div>
+  
+	<script src="loginjs.js"></script>
+	<script>
+        function signup(event) {
+            event.preventDefault();
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
